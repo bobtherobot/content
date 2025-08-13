@@ -130,8 +130,10 @@ f(1, 2, 3);
 Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
-// Generate a sequence of numbers
-// Since the array is initialized with `undefined` on each position,
+// Generate a sequence of numbers.
+// The first argument "{ length: 5 }" is emulating
+// an array, but only providing the "length" property,
+// causing initialization with `undefined` on each position,
 // the value of `v` below will be `undefined`
 Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
